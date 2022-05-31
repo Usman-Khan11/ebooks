@@ -1,0 +1,290 @@
+
+a{
+	text-decoration: none !important;
+}
+.admin_header{
+	padding: 10px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1DBB90;
+	color: white;
+	top: 0%;
+	position: fixed;
+	width: 100%;
+
+}
+.admin_header i{
+	cursor: pointer;
+}
+.admin_sidebar{
+	background-color: #1DBB90;
+	width: 20%;
+	height: 100%;
+	position: fixed;
+	left: -100%;
+	top: 50px;
+	z-index: 100;
+	transition: all .5s;
+}
+
+.admin_sidebar ul{
+	margin: 10px 0px;
+	padding: 0px;
+}
+
+.admin_sidebar ul li{
+	list-style-type: none;
+}
+.admin_sidebar ul li a{
+	padding: 10px 10px;
+	font-weight: 500;
+	display: block;
+	color: white !important;
+	font-size: 18px;
+}
+.admin_sidebar ul li a:hover{
+	color: #1DBB90 !important;
+	background-color: #fff;
+}
+@media(max-width: 1000px){
+	.admin_sidebar{
+		width: 47%;
+	}
+}
+.show{
+	left: 0% !important;
+}
+.small_menu{
+	position: absolute;
+	right: 1%;
+	top: 52px;
+	background-color: #F5f5f5;
+	display: none;
+	width: 200px;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.small_menu a{
+	list-style: none;
+	display: block;
+	padding: 13px 15px;
+	color: #2c3539;
+	border-radius: 10px;
+}
+
+.small_menu a:hover{
+	color: #F5f5f5;
+	background-color: #2c3539;
+}
+
+
+/* GENERAL BUTTON STYLING */
+.my_btn button,
+.my_btn button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.my_btn button {
+  background: none;
+  border: 3px solid #1DBB90;
+  border-radius: 5px;
+  color: #1DBB90;
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px 15px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.my_btn button::before,
+.my_btn button::after {
+  background: #1DBB90;
+  content: '';
+  position: absolute;
+  z-index: -2;
+}
+
+.my_btn button:hover {
+  color: #fff;
+  background-color: #1DBB90;
+}
+
+
+/* BUTTON 5 */
+.my_btn .btn-5 {
+  overflow: hidden;
+}
+
+.my_btn .btn-5::after {
+  /*background-color: #f00;*/
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+}
+
+.my_btn .btn-5:hover:after {
+  height: 100%;
+  width: 135%;
+}
+
+.my_btn a{
+  color: #1DBB90;
+
+}
+.my_btn button:hover a{
+  color: #fff;
+
+}
+
+.pointer{
+	cursor: pointer !important;
+}
+
+
+
+
+ /***********************
+	TABLE LISTING
+*****************************/
+
+.my_table{
+	height: 720px;
+	overflow: auto;
+}
+
+.my_table table {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.my_table table caption {
+	font-size: 1.5em;
+	margin: .5em 0 .75em;
+}
+
+.my_table table tr {
+	background-color: floralwhite;
+	border: 1px solid #ddd;
+	padding: .35em;
+}
+
+.my_table table th,
+.my_table table td {
+	padding: .625em;
+	text-align: center;
+}
+
+.my_table table th {
+	font-size: .85em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+	.my_table table {
+		border: 0;
+	}
+
+	.my_table table caption {
+		font-size: 1.3em;
+	}
+
+	.my_table table thead {
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+	}
+
+	.my_table table tr {
+		border-bottom: 3px solid #ddd;
+		display: block;
+		margin-bottom: .625em;
+	}
+
+	.my_table table td {
+		border-bottom: 1px solid #ddd;
+		display: block;
+		font-size: .8em;
+		text-align: right;
+	}
+
+	.my_table table td::before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.my_table table td:last-child {
+		border-bottom: 0;
+	}
+}
+
+/***********************
+TABLE LISTING END
+*****************************/
+
+
+
+
+/************************
+    MAIN HAEDING CSS 
+************************/
+
+.heading h2{
+	color: #1DBB90;
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
+	font-size: 45px;
+	color: #1DBB90;
+	position: relative;
+	text-align: center;
+	padding-bottom: 5px;
+	text-transform: capitalize;
+  }
+  
+  .heading h2:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #1DBB90;
+  }
+  .heading h2:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #1DBB90;
+  }
+  
+  
+  /************************
+	MAIN HAEDING CSS END
+  ************************/
